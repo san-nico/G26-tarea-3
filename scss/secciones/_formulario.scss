@@ -1,0 +1,60 @@
+@use "../base/variables";
+
+.formulario {
+    display: grid;
+
+    &__form {
+        width: 100%;
+        max-width: 40rem;
+        display: grid;
+        gap: 2rem 1rem;
+        grid-template-columns: 1fr 1fr;
+        background: var(--color-superficie);
+        padding: 1.25rem;
+        border-radius: var(--radius-medium);
+        border: var(--borde-primario);
+
+        @media (max-width: variables.$breakpoint-mobile) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__campo {
+        display: grid;
+        gap: 0.5rem;
+    }
+
+    &__input {
+        padding: 0.75rem;
+        border-radius: var(--radius-small);
+        font-family: inherit;
+        font-weight: bold;
+        background: var(--color-primario);
+
+        &:focus {
+            outline: var(--borde-primario);
+        }
+    }
+
+    &__boton {
+        width: 100%;
+        padding: 0.75rem;
+        border: none;
+        border-radius: var(--radius-big);
+        font-weight: bold;
+        background: linear-gradient(90deg,
+                var(--color-secundario),
+                var(--color-primario));
+        color: black;
+        cursor: pointer;
+        grid-column: span 2;
+
+        &:hover {
+            opacity: 0.9;
+        }
+
+        @media (max-width: variables.$breakpoint-mobile) {
+            grid-column: span 1;
+        }
+    }
+}

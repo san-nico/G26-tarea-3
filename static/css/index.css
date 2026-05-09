@@ -65,7 +65,11 @@ body {
   padding: 2.5rem 1.25rem;
 }
 
-/* HEADER */
+/* SECCIONES */
+.seccion__titulo {
+  text-align: center;
+}
+
 .header {
   display: flex;
   background: var(--color-superficie);
@@ -100,7 +104,6 @@ body {
   color: var(--color-primario);
 }
 
-/* HERO */
 .hero {
   background: var(--color-hero);
   display: grid;
@@ -167,12 +170,6 @@ body {
   }
 }
 
-/* SECCIONES */
-.seccion__titulo {
-  text-align: center;
-}
-
-/* CARDS */
 .pilares {
   display: grid;
   justify-content: center;
@@ -212,7 +209,6 @@ body {
   }
 }
 
-/* SLIDER */
 .slider {
   display: grid;
   gap: 3rem;
@@ -303,7 +299,6 @@ body {
   background: var(--color-primario);
 }
 
-/* FORMULARIO */
 .formulario {
   display: grid;
 }
@@ -357,21 +352,6 @@ body {
   }
 }
 
-/* FOOTER */
-.footer {
-  border-top: var(--seccion-borde);
-  display: grid;
-  gap: 0.5rem;
-  background: var(--color-superficie);
-  text-align: center;
-  padding: 1.25rem;
-}
-.footer__link {
-  color: var(--color-primario);
-  text-decoration: none;
-}
-
-/* relatores */
 .relatores__contenedor {
   display: grid;
   gap: 1rem;
@@ -422,6 +402,19 @@ body {
 .relatores__rrss-img {
   border-radius: var(--radius-small);
   width: 2rem;
+}
+
+.footer {
+  border-top: var(--seccion-borde);
+  display: grid;
+  gap: 0.5rem;
+  background: var(--color-superficie);
+  text-align: center;
+  padding: 1.25rem;
+}
+.footer__link {
+  color: var(--color-primario);
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=index.css.map */

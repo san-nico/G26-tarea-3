@@ -1,0 +1,28 @@
+@use "variables";
+/* GLOBAL */
+h2 {
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+/* BASE */
+body {
+    font-family: Raleway, Arial, sans-serif;
+    background: var(--color-fondo);
+    color: var(--color-texto);
+    margin: 0;
+    background-image: url("../img/fondo.png");
+    background-size: 10rem;
+}
+
+.seccion {
+    display: grid;
+    width: 100%;
+    gap: 1rem;
+    place-items: center;
+    padding: 2.5rem 1.25rem;
+}
+/* SECCIONES */
+.seccion__titulo {
+    text-align: center;
+}

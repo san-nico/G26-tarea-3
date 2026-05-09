@@ -1,0 +1,15 @@
+@use "../base/variables";
+
+.footer {
+    border-top: var(--seccion-borde);
+    display: grid;
+    gap: 0.5rem;
+    background: var(--color-superficie);
+    text-align: center;
+    padding: 1.25rem;
+
+    &__link {
+        color: var(--color-primario);
+        text-decoration: none;
+    }
+}

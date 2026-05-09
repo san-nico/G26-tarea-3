@@ -1,0 +1,62 @@
+@use "../base/variables";
+
+.relatores {
+    &__contenedor {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(3, 1fr);
+
+        @media (max-width: variables.$breakpoint-large) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: variables.$breakpoint-tablet) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &__tarjeta {
+        display: grid;
+        grid-template-areas:
+            "foto datos"
+            "foto rrss";
+        grid-template-columns: auto 1fr;
+        gap: 1rem;
+    }
+
+    &__foto {
+        grid-area: foto;
+        width: 12rem;
+        height: 16rem;
+        flex-shrink: 0;
+        object-fit: cover;
+        border-radius: var(--radius-small);
+    }
+
+    &__datos {
+        grid-area: datos;
+        display: grid;
+        gap: 1rem;
+        height: 100%;
+    }
+
+    &__dato {
+        font-size: 0.8rem;
+    }
+
+    &__curriculum {
+        list-style-type: none;
+        display: grid;
+        gap: 0.5rem;
+    }
+
+    &__rrss-link {
+        grid-area: rrss;
+        align-self: end;
+    }
+
+    &__rrss-img {
+        border-radius: var(--radius-small);
+        width: 2rem;
+    }
+}

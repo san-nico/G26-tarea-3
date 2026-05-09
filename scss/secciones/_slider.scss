@@ -1,0 +1,107 @@
+@use "../base/variables";
+
+.slider {
+    display: grid;
+    gap: 3rem;
+    position: relative;
+    padding-top: 5rem; 
+    padding-bottom: 5rem;
+    border-top: var(--seccion-borde);
+    border-bottom: var(--seccion-borde);
+    background: var(--color-fondo);
+
+    &__track {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 100%;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    &__card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        grid-template-areas:
+            "img title"
+            "img text";
+
+        @media (max-width: variables.$breakpoint-mobile) {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "img"
+                "title"
+                "text";
+
+        }
+    }
+
+    &__imagen {
+        width: 12rem;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        grid-area: img;
+        border: 10px var(--color-superficie) solid;
+        justify-self: end;
+        align-self: center;
+    }
+
+    &__titulo {
+        justify-self: start;
+        align-self: end;
+        color: var(--color-primario);
+        font-size: 4rem;
+        grid-area: title;
+    }
+
+    &__texto {
+        align-self: start;
+        grid-area: text;
+    }
+
+    &__botones {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem;
+        width: 100%;
+        z-index: 10;
+    }
+
+    &__btn {
+        background: var(--color-primario);
+        width: 3rem;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 0;
+    }
+
+
+    &__controls {
+        position: absolute;
+        bottom: 0.75rem;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.9rem;
+        opacity: 0.9;
+    }
+
+    &__dot {
+        width: 0.5rem;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        background: #0008;
+        transition: background 0.3s;
+
+        &--active {
+            background: var(--color-primario);
+        }
+    }
+}

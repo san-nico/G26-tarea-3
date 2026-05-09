@@ -1,0 +1,71 @@
+@use "../base/variables";
+
+.hero {
+    background: var(--color-hero);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    border-top: var(--seccion-borde);
+    border-bottom: var(--seccion-borde);
+    gap: 2rem;
+
+    &__content {
+        justify-self: end;
+        color: white;
+        display: grid;
+        gap: 1rem;
+        justify-items: start;
+
+        @media (max-width: variables.$breakpoint-mobile) {
+            justify-self: center;
+        }
+    }
+
+    &__imagen {
+        justify-self: start;
+
+        @media (max-width: variables.$breakpoint-mobile) {
+            display: none;
+        }
+    }
+
+    &__titulo {
+        font-size: 3rem;
+    }
+
+    &__anio {
+        font-size: 1.5rem;
+        background: var(--color-secundario);
+        padding: 0.25rem 1.4rem;
+        border: 3px #fff6 solid;
+        border-radius: var(--radius-medium);
+    }
+
+    &__destacado--1 {
+        color: var(--color-primario);
+        font-weight: bold;
+    }
+
+    &__cta {
+        background: var(--color-enfasis);
+        padding: 0.5rem 2rem;
+        border-radius: var(--radius-big);
+        font-size: 1rem;
+        font-weight: bold;
+        border: 2px white solid;
+    }
+
+    &__tickets {
+        display: grid;
+        list-style-position: inside;
+        list-style-type: circle;
+        gap: 0.5rem;
+        font-style: italic;
+    }
+
+    @media (max-width: variables.$breakpoint-mobile) {
+        gap: 2rem;
+        justify-items: center;
+        grid-template-columns: 1fr;
+    }
+}

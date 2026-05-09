@@ -1,0 +1,38 @@
+@use "../base/variables";
+
+.header {
+    display: flex;
+    background: var(--color-superficie);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 5%;
+
+    &__logo {
+        width: 7.5rem;
+    }
+
+    &__nav {
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: end;
+        gap: 1.25rem;
+
+        @media (max-width: variables.$breakpoint-mobile) {
+            place-self: end;
+            display: inline-flex;
+            flex-direction: column;
+            gap: 0.2rem;
+            text-align: right;
+        }
+    }
+
+    &__link {
+        color: var(--color-texto);
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover {
+            color: var(--color-primario);
+        }
+    }
+}
