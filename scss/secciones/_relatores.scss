@@ -22,6 +22,14 @@
             "foto rrss";
         grid-template-columns: auto 1fr;
         gap: 1rem;
+
+        @media (max-width: variables.$breakpoint-mobile) {
+            grid-template-areas:
+                "foto"
+                "datos"
+                "rrss";
+            grid-template-columns: 1fr;
+        }
     }
 
     &__foto {

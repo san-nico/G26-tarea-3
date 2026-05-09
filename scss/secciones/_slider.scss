@@ -27,6 +27,7 @@
             "img text";
 
         @media (max-width: variables.$breakpoint-mobile) {
+            
             grid-template-columns: 1fr;
             grid-template-areas:
                 "img"
@@ -44,6 +45,10 @@
         border: 10px var(--color-superficie) solid;
         justify-self: end;
         align-self: center;
+        @media (max-width: variables.$breakpoint-mobile) {
+            justify-self:center;
+        }
+          
     }
 
     &__titulo {
@@ -52,11 +57,17 @@
         color: var(--color-primario);
         font-size: 4rem;
         grid-area: title;
+        @media (max-width: variables.$breakpoint-mobile) {
+            justify-self:center;
+        }
     }
 
     &__texto {
         align-self: start;
         grid-area: text;
+        @media (max-width: variables.$breakpoint-mobile) {
+            justify-self:center;
+        }
     }
 
     &__botones {

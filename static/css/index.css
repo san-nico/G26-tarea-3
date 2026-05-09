@@ -247,6 +247,11 @@ body {
   justify-self: end;
   align-self: center;
 }
+@media (max-width: 426px) {
+  .slider__imagen {
+    justify-self: center;
+  }
+}
 .slider__titulo {
   justify-self: start;
   align-self: end;
@@ -254,9 +259,19 @@ body {
   font-size: 4rem;
   grid-area: title;
 }
+@media (max-width: 426px) {
+  .slider__titulo {
+    justify-self: center;
+  }
+}
 .slider__texto {
   align-self: start;
   grid-area: text;
+}
+@media (max-width: 426px) {
+  .slider__texto {
+    justify-self: center;
+  }
 }
 .slider__botones {
   position: absolute;
@@ -372,6 +387,12 @@ body {
   grid-template-areas: "foto datos" "foto rrss";
   grid-template-columns: auto 1fr;
   gap: 1rem;
+}
+@media (max-width: 426px) {
+  .relatores__tarjeta {
+    grid-template-areas: "foto" "datos" "rrss";
+    grid-template-columns: 1fr;
+  }
 }
 .relatores__foto {
   grid-area: foto;
