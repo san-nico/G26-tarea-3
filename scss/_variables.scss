@@ -1,0 +1,20 @@
+/* BREAKPOINTS */
+$breakpoint-large: 1025px;
+$breakpoint-tablet: 769px;
+$breakpoint-mobile: 426px;
+
+/* VARIABLES */
+:root {
+    --color-fondo: #0b0b1f;
+    --color-superficie: #1d1a2a;
+    --color-primario: #39ff88;
+    --color-secundario: #8b5cf6;
+    --color-texto: #fffb;
+    --color-enfasis: #f00a;
+    --color-hero: #1d0f26;
+    --radius-small: 0.5rem;
+    --radius-medium: 1.25rem;
+    --radius-big: 2rem;
+    --borde-primario: 0.1rem solid var(--color-primario);
+    --seccion-borde: 1px #fff5 solid;
+}
